@@ -4,7 +4,11 @@
     "register": "注册",
     "codeLogin": "验证码登录",
     "qrcodeLogin": "二维码登录",
-    "forgetPassword": "忘记密码"
+    "forgetPassword": "忘记密码",
+    "registerSuccess": "注册成功",
+    "registerFailed": "注册失败",
+    "registerSuccessTip": "注册成功提示",
+    "registerFailedTip": "注册失败提示"
   },
   "dashboard": {
     "title": "概览",

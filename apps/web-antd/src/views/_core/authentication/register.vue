@@ -3,14 +3,19 @@ import type { VbenFormSchema } from '@vben/common-ui';
 import type { Recordable } from '@vben/types';
 
 import { computed, h, ref } from 'vue';
+import { useRouter } from 'vue-router';
 
 import { AuthenticationRegister, z } from '@vben/common-ui';
 import { $t } from '@vben/locales';
 
+import { notification } from 'ant-design-vue';
+
+import { registerApi } from '#/api/core/auth';
+
 defineOptions({ name: 'Register' });
 
 const loading = ref(false);
-
+const router = useRouter();
 const formSchema = computed((): VbenFormSchema[] => {
   return [
     {
@@ -82,8 +87,23 @@ const formSchema = computed((): VbenFormSchema[] => {
 });
 
 function handleSubmit(value: Recordable<any>) {
-  // eslint-disable-next-line no-console
-  console.log('register submit:', value);
+  // 注册成功后，跳转到登录页面
+  registerApi(value)
+    .then(() => {
+      notification.success({
+        description: $t('page.auth.registerSuccessTip'),
+        duration: 3,
+        message: $t('page.auth.registerSuccess'),
+      });
+      router.push({ name: 'Login' });
+    })
+    .catch((error) => {
+      notification.error({
+        description: $t('page.auth.registerFailedTip'),
+        duration: 3,
+        message: error.message,
+      });
+    });
 }
 </script>
 

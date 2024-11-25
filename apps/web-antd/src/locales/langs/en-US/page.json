@@ -4,7 +4,11 @@
     "register": "Register",
     "codeLogin": "Code Login",
     "qrcodeLogin": "Qr Code Login",
-    "forgetPassword": "Forget Password"
+    "forgetPassword": "Forget Password",
+    "registerSuccess": "Register Success",
+    "registerFailed": "Register Failed",
+    "registerSuccessTip": "Register Success Tip",
+    "registerFailedTip": "Register Failed Tip"
   },
   "dashboard": {
     "title": "Dashboard",
