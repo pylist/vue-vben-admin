@@ -2,5 +2,8 @@
   "title": "Super Admin",
   "users": {
     "title": "Users"
+  },
+  "settings": {
+    "title": "Settings"
   }
 }

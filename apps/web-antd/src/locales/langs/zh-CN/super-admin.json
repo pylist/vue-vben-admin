@@ -2,5 +2,8 @@
   "title": "超级管理",
   "users": {
     "title": "用户管理"
+  },
+  "settings": {
+    "title": "系统设置"
   }
 }

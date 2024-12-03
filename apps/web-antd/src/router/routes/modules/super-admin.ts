@@ -23,6 +23,14 @@ const routes: RouteRecordRaw[] = [
         path: '/super-admin/users',
         component: () => import('#/views/super-admin/users/index.vue'),
       },
+      {
+        meta: {
+          title: $t('super-admin.settings.title'),
+        },
+        name: 'Settings',
+        path: '/super-admin/settings',
+        component: () => import('#/views/super-admin/settings/index.vue'),
+      },
     ],
   },
 ];
