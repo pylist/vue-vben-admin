@@ -127,10 +127,10 @@ watch(
     <template #user-dropdown>
       <UserDropdown
         :avatar
+        :description="userStore.userInfo?.contactInfo"
         :menus
-        :text="userStore.userInfo?.realName"
-        description="ann.vben@gmail.com"
-        tag-text="Pro"
+        :text="userStore.userInfo?.nickName"
+        tag-text="Vip"
         @logout="handleLogout"
       />
     </template>

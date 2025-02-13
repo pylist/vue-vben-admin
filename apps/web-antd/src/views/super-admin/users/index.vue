@@ -211,6 +211,22 @@ const [UpdateForm, updateFormApi] = useVbenForm({
       fieldName: 'nickName',
       label: '昵称',
     },
+    {
+      component: 'Input',
+      componentProps: {
+        placeholder: '请输入',
+      },
+      fieldName: 'email',
+      label: '邮箱',
+    },
+    {
+      component: 'Input',
+      componentProps: {
+        placeholder: '请输入',
+      },
+      fieldName: 'phone',
+      label: '手机号',
+    },
   ],
   showDefaultActions: false,
 });

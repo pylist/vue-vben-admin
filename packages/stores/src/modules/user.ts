@@ -7,6 +7,18 @@ interface BasicUserInfo {
    */
   avatar: string;
   /**
+   * 用户联系方式
+   */
+  contactInfo?: string;
+  /**
+   * 用户邮箱
+   */
+  email?: string;
+  /**
+   * 用户手机号
+   */
+  phone?: string;
+  /**
    * 用户昵称
    */
   realName: string;
@@ -45,6 +57,10 @@ export const useUserStore = defineStore('core-user', {
       this.userInfo = userInfo;
       // 设置角色信息
       const roles = userInfo?.roles ?? [];
+      // 设置联系信息
+      if (userInfo) {
+        userInfo.contactInfo = userInfo?.phone || userInfo?.email;
+      }
       this.setUserRoles(roles);
     },
     setUserRoles(roles: string[]) {
