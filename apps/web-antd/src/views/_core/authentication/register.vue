@@ -21,6 +21,15 @@ const formSchema = computed((): VbenFormSchema[] => {
     {
       component: 'VbenInput',
       componentProps: {
+        placeholder: '昵称',
+      },
+      fieldName: 'nickName',
+      label: '昵称',
+      rules: z.string().min(1, { message: '请输入昵称' }),
+    },
+    {
+      component: 'VbenInput',
+      componentProps: {
         placeholder: $t('authentication.usernameTip'),
       },
       fieldName: 'username',

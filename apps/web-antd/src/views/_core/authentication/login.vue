@@ -79,6 +79,7 @@ const formSchema = computed((): VbenFormSchema[] => {
   <AuthenticationLogin
     :form-schema="formSchema"
     :loading="authStore.loginLoading"
+    sub-title="请输入你的账户信息"
     @submit="authStore.authLogin"
   />
 </template>
