@@ -109,15 +109,6 @@ class PreferenceManager {
       },
       { immediate: true },
     );
-
-    // 监听系统主题偏好设置变化
-    window
-      .matchMedia('(prefers-color-scheme: dark)')
-      .addEventListener('change', ({ matches: isDark }) => {
-        this.updatePreferences({
-          theme: { mode: isDark ? 'dark' : 'light' },
-        });
-      });
   }
 
   /**
